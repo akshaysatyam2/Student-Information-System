@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Login</title>
+<style>
+body {
+	display: block;
+	margin-left: 35%;
+	margin-top: 15%;
+	background-image:url("bg4.avif");
+}
+
+div {
+	display: inline-block;
+	height: 200px;
+	width: 280px;
+	padding: 10px;
+	background-color: bisque;
+	border: 2px solid black;
+}
+</style>
+
+</head>
+<body>
+	<div>
+		<h1
+			style="color: black; background-color: grey; font-size: 30px; text-align: center;">
+			Employee Login Form
+			</h1>
+		<form action="employeeLoginJDBC.jsp" method="post">
+			<table border="2px"
+				style="margin-left: 10% x; color: black; background-color: gray; text-align: center;">
+				<tr>
+					<th>USER ID:</th>
+					<td><input type="text" name="user"></td>
+				</tr>
+				<tr>
+					<th>Password:</th>
+					<td><input type="password" name="pass"></td>
+				</tr>
+				<tr>
+					<th><button type="reset">Reset</button></th>
+					<td><button type="submit">LOGIN</button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+Create Database Akshay12Sept2022;
+USE Akshay12Sept2022;
+
+CREATE TABLE suid(
+    user VARCHAR(255) NOT NULL PRIMARY KEY,
+    pass VARCHAR(255) NOT NULL
+);
+Insert INTO suid VALUES("admin", "student");
+
+CREATE TABLE contact(
+    count INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    phone VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    questions VARCHAR(1023) NOT NULL
+);
+Insert INTO contact VALUES(NULL,"Aman", "7898947454", "aman.am@yahoo.com","What is the Result day for CSE Sem-4.");
+
+CREATE TABLE sDetails(
+    count INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user VARCHAR(255) NOT NULL,
+    sFirstName VARCHAR(255) NOT NULL,
+    sLastName VARCHAR(255),
+    sPhoneNumber VARCHAR(10) NOT NULL,
+    sEmailAddress VARCHAR(255),
+    sDOB DATE NOT NULL,
+    sGender ENUM('M', 'F')
+);
+Insert INTO sDetails VALUES(NULL,"admin", "First","Last", "7488765432", "admin.mail@assessment.com",'1999-09-23',"M");
+
+CREATE TABLE euid(
+    user VARCHAR(255) NOT NULL PRIMARY KEY,
+    pass VARCHAR(255) NOT NULL
+);
+Insert INTO euid VALUES("admin", "employee");
+
+CREATE TABLE eDetails(
+    count INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user VARCHAR(255) NOT NULL,
+    eFirstName VARCHAR(255) NOT NULL,
+    eLastName VARCHAR(255),
+    eFatherName VARCHAR(255) NOT NULL,
+    ePhoneNumber VARCHAR(10) NOT NULL,
+    eEmailAddress VARCHAR(255),
+    eDOB DATE NOT NULL,
+    eGender ENUM('M', 'F')
+);
+Insert INTO eDetails VALUES(NULL,"admin", "First", "Last", "Sr. Admin", "7488765432", "eadmin.mail@assessment.com","1980-09-23","M");
+
+CREATE TABLE auid(
+    user VARCHAR(255) NOT NULL PRIMARY KEY,
+    pass VARCHAR(255) NOT NULL
+);
+Insert INTO euid VALUES("admin", "admin");
+
+
+SELECT * FROM sAcademicCourse INNER JOIN sCourseTaken ON sAcademicCourse.courseName = sCourseTaken.courseName;
+
+
+CREATE TABLE Notices(
+    count INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    notice VARCHAR(1024) NOT NULL,
+    priority INTEGER NOT NULL
+);
+Insert INTO Notices VALUES(NULL, "Addmission form avilable.",1);
+
+CREATE TABLE sAcademicCourse(
+    courseID INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    courseName VARCHAR(255) NOT NULL,
+    coursePrice VARCHAR(25) NOT NULL,
+    courseDuration VARCHAR(255) NOT NULL
+);
+Insert INTO sAcademicCourse VALUES(NULL,"JAVA", "12000","3 Months");
+
+CREATE TABLE sCourseTaken(
+	count INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user VARCHAR(255) NOT NULL,
+    sFatherName VARCHAR(255) NOT NULL,
+    courseName VARCHAR(255) NOT NULL,
+    sCourseExamStatus VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE sAcademicCourseFees(
+	user VARCHAR(255) NOT NULL,
+    totalCoursePrice VARCHAR(25) NOT NULL,
+    coursePricePaid VARCHAR(25) NOT NULL
+);
+Insert INTO sAcademicCourseFees VALUES("admin","0", "0");
+
+CREATE TABLE sAcademicCourseExams(
+	count INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	courseName VARCHAR(255) NOT NULL,
+    courseExamDate DATE NOT NULL,
+    courseExamTime VARCHAR(15) NOT NULL,
+    courseExamDuration VARCHAR(25) NOT NULL
+);
+

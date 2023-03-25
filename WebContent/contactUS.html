@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Contact US</title>
+<style>
+body {
+	display: block;
+	margin-left: 30%;
+	margin-top: 10%;
+	background-image: url("bg4.avif");
+}
+
+form {
+	height: 330px;
+	width: 400px;
+    padding: 20px;
+	background-color: bisque;
+	border: 2px solid black;
+}
+h1{
+    text-align: center;
+}
+table, tr, td{
+    margin: 5px;
+}
+input, label{
+    height: 30px;
+    width: 250px;
+    font-size: 25px;
+}
+textarea{
+    height: 80px;
+    width: 250px;
+    font-size: 15px;
+}
+button{
+    height: 25px;
+    width: 100px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+</style>
+</head>
+<body>
+	<form action="contactUSJDBC.jsp">
+		<h1>
+			<u>Contact Us</u>
+		</h1>
+		<table>
+			
+			<tr>
+				<td>Name:</td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+			<tr>
+				<td>Phone Number:</td>
+				<td><input type="text" name="phone"></td>
+			</tr>
+			<tr>
+				<td>Email :</td>
+				<td><input type="email" name="email"></td>
+			</tr>
+			<tr>
+				<td>Question(s):</td>
+				<td><textarea name="questions"></textarea></td>
+			</tr>
+
+			<tr>
+				<td><button type="reset">Reset</button></td>
+				<td><button type="submit">Submit</button></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
